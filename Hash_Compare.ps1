@@ -1,4 +1,6 @@
-﻿Add-Type -AssemblyName System.Windows.Forms
+﻿
+function Hash-Compare {
+Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
 $path = Read-Host Von Welcher Datei soll der Hash errechnet werden?
@@ -57,4 +59,5 @@ if($hash -eq $currenthash){
     Write-Host Sie sind gleich -ForegroundColor Green
 }else{
     Write-Host Sie sind unterschiedlich -ForegroundColor Red
+}
 }
