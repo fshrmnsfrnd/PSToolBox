@@ -7,8 +7,7 @@ while (-Not (Test-Path -Path $path)) {
 }
 
 try {
-    Import-Module -Name PSToolBox -Global
-    Write-Host "Modul erfolgreich importiert."
+    Import-Module -Name pstoolbox -Global
 } catch {
     Write-Error "Fehler beim Importieren des Moduls: $_"
 }
