@@ -3,7 +3,7 @@
 
     $MAC_ORG = Import-Csv -Delimiter ';' -Path $PSScriptRoot\MAC_Organization.csv
 
-    $Computers = (arp.exe -a | Select-String "$SubNet.dynam") -replace ' +',',' | ConvertFrom-Csv -Header Computername,IPv4,MAC,x,Vendor | Select Computername,IPv4,MAC
+    $Computers = (arp.exe -a ) -replace ' +',',' | ConvertFrom-Csv -Header Computername,IPv4,MAC,x,Vendor | Select Computername,IPv4,MAC
 
     foreach ($Computer in $Computers) {
         # nslookup für den Computernamen
@@ -31,3 +31,5 @@
     # Zeige die Computerinformationen an
     $Computers
 }
+
+Scan-LocalNetwork
