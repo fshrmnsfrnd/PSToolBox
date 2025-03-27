@@ -1,4 +1,4 @@
-$path = 'C:\Program Files\WindowsPowerShell\Modules\'
+$path = 'C:\Windows\System32\WindowsPowerShell\v1.0\Modules'
 
 Copy-Item -Path $PSScriptRoot -Destination $path -Force -Recurse
 
